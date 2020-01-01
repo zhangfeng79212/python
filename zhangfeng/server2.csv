@@ -1,0 +1,173 @@
+,node,ip,username,password,lickey,4
+0,,60.205.178.238,root,abc123.com,,"name: cintel
+key: hj8TFcj7Nm6
+"
+1,node1,10.30.1.21,acd,cintel1234!@#$,,
+2,node1,10.30.1.22,acd,cintel1234!@#$,,"name: cintel
+key: c0/q24QCrXE
+"
+3,node1,10.30.1.23,cti,cintel1234!@#$,,
+4,node1,10.30.1.24,cti,cintel1234!@#$,,"name: cintel
+key: Q6DfFGQxE7s
+"
+5,node1,10.30.1.31,smp,cintel1234!@#$,,"name: cintel
+key: NuRS0sE8OzE
+"
+6,node1,10.30.1.32,smp,cintel1234!@#$,,"name: cintel
+key: ZFZNrfp4h/I
+"
+7,node1,10.30.1.51,sbc,cintel1234!@#$,,"name: cintel
+key: y3k4wsWFAJQ
+"
+8,node1,10.30.1.52,sbc,cintel1234!@#$,,
+9,node1,10.30.1.71,media,123456,,"name: cintel
+key: PfS8Cb92Y.s
+"
+10,node1,10.30.1.72,media,123456,,
+11,node1,10.30.1.101,ms,cintel1234!@#$,,"name: cintel
+key: CFu457ogCUk
+"
+12,node1,10.30.1.102,ms,cintel1234!@#$,,"name: cintel
+key: Ru3cGOkytgg
+"
+13,node1,10.30.1.103,ms,cintel1234!@#$,,"name: cintel
+key: ED1OBGEK9Wg
+"
+14,node1,10.30.1.104,ms,cintel1234!@#$,,"name: cintel
+key: Kd2J.qV7oN.
+"
+15,node1,10.30.1.105,ms,cintel1234!@#$,,"name: cintel
+key: DXXPSpKiE3M
+"
+16,node1,10.30.1.106,ms,cintel1234!@#$,,"name: cintel
+key: J3EZ03NnSUs
+"
+17,node1,10.30.1.107,ms,cintel1234!@#$,,"name: cintel
+key: aRJ6mHVefAM
+"
+18,node1,10.30.1.108,ms,cintel1234!@#$,,"name: cintel
+key: dtIP8oAa58E
+"
+19,node1,10.30.1.81,lamp,cintel1234!@#$,,"name: cintel
+key: RRJs8PhD7is
+"
+20,node2,10.30.2.21,acd,cintel1234!@#$,,"name: cintel
+key: A.Z6QnA2G.M
+"
+21,node2,10.30.2.22,acd,cintel1234!@#$,,"name: cintel
+key: QJTTnOqcIbw
+"
+22,node2,10.30.2.23,cti,cintel1234!@#$,,"name: cintel
+key: txIIiQk.Dk6
+"
+23,node2,10.30.2.24,cti,cintel1234!@#$,,"name: cintel
+key: RkNS3mgFDIA
+"
+24,node2,10.30.2.31,smp,cintel1234!@#$,,"name: cintel
+key: ECgk3h591ng
+"
+25,node2,10.30.2.32,smp,cintel1234!@#$,,"name: cintel
+key: oC5iPoPp.w6
+"
+26,node2,10.30.2.51,sbc,cintel1234!@#$,,"name: cintel
+key: 5ALvFgeTg7o
+"
+27,node2,10.30.2.52,sbc,cintel1234!@#$,,"name: cintel
+key: ITTBo1EYmcw
+"
+28,node2,10.30.2.91,media,cintel123,,"name: cintel
+key: wjOXK8fv2dY
+"
+29,node2,10.30.2.92,media,cintel123,,"name: cintel
+key: SnaFFK.IoOs
+"
+30,node2,10.30.2.101,ms,cintel1234!@#$,,"name: cintel
+key: MBjLQxjYHtM
+"
+31,node2,10.30.2.102,ms,cintel1234!@#$,,"name: cintel
+key: n7PQP3mMeQk
+"
+32,node2,10.30.2.103,ms,cintel1234!@#$,,"name: cintel
+key: MIugZP4MuyQ
+"
+33,node2,10.30.2.104,ms,cintel1234!@#$,,"name: cintel
+key: .IZZWTrSu6U
+"
+34,node2,10.30.2.105,ms,cintel1234!@#$,,"name: cintel
+key: 9ptPT9XS7VA
+"
+35,node2,10.30.2.106,ms,cintel1234!@#$,,"name: cintel
+key: ePD3kzY.hKY
+"
+36,node2,10.30.2.107,ms,cintel1234!@#$,,"name: cintel
+key: CULmRvy5esc
+"
+37,node2,10.30.2.108,ms,cintel1234!@#$,,"name: cintel
+key: KMZNap0X5Zo
+"
+38,node2,10.30.2.81,lamp,cintel1234!@#$,,"name: cintel
+key: B01gI4U9Rb2
+"
+39,node3,10.30.3.21,acd,cintel1234!@#$,,"name: cintel
+key: XNaGcTvkw9I
+"
+40,node3,10.30.3.22,acd,cintel1234!@#$,,"name: cintel
+key: vftVnb7EhI2
+"
+41,node3,10.30.3.23,cti,cintel1234!@#$,,"name: cintel
+key: IiIAlnbwsXI
+"
+42,node3,10.30.3.24,cti,cintel1234!@#$,,"name: cintel
+key: .o7o/rALe7s
+"
+43,node3,10.30.3.31,smp,cintel1234!@#$,,"name: cintel
+key: K6kZ1R8wm.w
+"
+44,node3,10.30.3.32,smp,cintel1234!@#$,,"name: cintel
+key: tzDVGjy0SS.
+"
+45,node3,10.30.3.51,sbc,cintel1234!@#$,,"name: cintel
+key: c.Aim8fEuOE
+"
+46,node3,10.30.3.52,sbc,cintel1234!@#$,,"name: cintel
+key: 58QvkLP3yZc
+"
+47,node3,10.30.3.91,media,cintel123,,"name: cintel
+key: J45IBFt41wM
+"
+48,node3,10.30.3.92,media,cintel123,,"name: cintel
+key: tinIf1ZYxRE
+"
+49,node3,10.30.3.101,ms,cintel1234!@#$,,"name: cintel
+key: APZgBx47GKs
+"
+50,node3,10.30.3.102,ms,cintel1234!@#$,,"name: cintel
+key: mbUjtMxSx4s
+"
+51,node3,10.30.3.103,ms,cintel1234!@#$,,"name: cintel
+key: Cy8fWZ4Hl2A
+"
+52,node3,10.30.3.104,ms,cintel1234!@#$,,"name: cintel
+key: bJ.DpA5Z5NA
+"
+53,node3,10.30.3.105,ms,cintel1234!@#$,,"name: cintel
+key: SXB8WG4oU3k
+"
+54,node3,10.30.3.106,ms,cintel1234!@#$,,"name: cintel
+key: txERCseb94w
+"
+55,node3,10.30.3.107,ms,cintel1234!@#$,,"name: cintel
+key: OOsXbhg1hx2
+"
+56,node3,10.30.3.108,ms,cintel1234!@#$,,"name: cintel
+key: htxcRmFDHBw
+"
+57,node3,10.30.3.81,lamp,cintel1234!@#$,,"name: cintel
+key: jPdnJnYnF..
+"
+58,nodetest,192.168.14.141,acd,cintel1234!@#$,,"name: cintel
+key: M3T5jRzIh9E
+"
+59,nodetest,192.168.14.149,acd,cintel1234!@#$,,"name: cintel
+key: hpWptEzjuNw
+"
