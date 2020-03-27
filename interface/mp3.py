@@ -45,18 +45,42 @@ def downloadmp3(callid,ip):
                 if(msserver and srfmsgid ):
                     down_url = "http://"+ip+":8068/cincc-serv/media/download"
                     down_data = {"msServer": msserver,
-                                 "filepath": vccid+"/"+srfmsgid,
+                                 "filePath": vccid+"/"+srfmsgid,
                                  }
-
-                    down_res = s.get(url=down_url, params=down_data,stream=False,timeout= 10)
+                    print(down_url)
+                    print(down_data)
+                    down_res = s.get(url=down_url, params=down_data)
 
                     with open(filename, "wb") as code:
+                        code.write(down_res.content)
+                        #下面是下载cca
+                    filename1=filename[:-4]+"CCA.wav"
+                    down_data = {"msServer": msserver,
+                                 "filePath": vccid + "/" + srfmsgid[:-4]+"CCA.wav",
+                                 }
+                    print(down_url)
+                    print(down_data)
+                    down_res = s.get(url=down_url, params=down_data)
+
+                    with open(filename1, "wb") as code:
+                        code.write(down_res.content)
+                        # 下面是下载ccb
+                    filename2 = filename[:-4] + "CCB.wav"
+                    down_data = {"msServer": msserver,
+                                 "filePath": vccid + "/" + srfmsgid[:-4]+"CCB.wav",
+                                 }
+                    print(down_url)
+                    print(down_data)
+                    down_res = s.get(url=down_url, params=down_data)
+
+                    with open(filename2, "wb") as code:
                         code.write(down_res.content)
     except Exception as ex:
         print("execute fail!!")
         print(ex)
     finally:
         s.close()
+
 
 downloadmp3(callid,'10.30.1.153')
 downloadmp3(callid,'10.30.2.153')
