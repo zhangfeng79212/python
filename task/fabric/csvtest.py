@@ -7,17 +7,75 @@ import schedule
 import time
 import yagmail
 import json
+dict1List=[{"ip": "192.168.14.141", "username": "acd", "password": "cintel1234!@#$"},
+            {"ip": "192.168.14.141", "username": "acd", "password": "cintel1234!@#$"}
+           ]
+#dict1={"ip":"60.205.178.238","username":"root","password":"abc123.com"}
+dict2List=[
+            {"ip": "10.30.1.21", "username": "acd", "password": "cintel1234!@#$"},
+            {"ip": "10.30.1.22", "username": "acd", "password": "cintel1234!@#$"},
+            {"ip": "10.30.2.21", "username": "acd", "password": "cintel1234!@#$"},
+            {"ip": "10.30.2.22", "username": "acd", "password": "cintel1234!@#$"},
+            {"ip": "10.30.3.21", "username": "acd", "password": "cintel1234!@#$"},
+            {"ip": "10.30.3.22", "username": "acd", "password": "cintel1234!@#$"},
+            {"ip": "10.30.1.23", "username": "cti", "password": "cintel1234!@#$"},
+            {"ip": "10.30.1.24", "username": "cti", "password": "cintel1234!@#$"},
+            {"ip": "10.30.2.23", "username": "cti", "password": "cintel1234!@#$"},
+            {"ip": "10.30.2.24", "username": "cti", "password": "cintel1234!@#$"},
+            {"ip": "10.30.3.23", "username": "cti", "password": "cintel1234!@#$"},
+            {"ip": "10.30.3.24", "username": "cti", "password": "cintel1234!@#$"},
+            {"ip": "10.30.1.31", "username": "smp", "password": "cintel1234!@#$"},
+            {"ip": "10.30.1.32", "username": "smp", "password": "cintel1234!@#$"},
+            {"ip": "10.30.2.31", "username": "smp", "password": "cintel1234!@#$"},
+            {"ip": "10.30.2.32", "username": "smp", "password": "cintel1234!@#$"},
+            {"ip": "10.30.3.31", "username": "smp", "password": "cintel1234!@#$"},
+            {"ip": "10.30.3.32", "username": "smp", "password": "cintel1234!@#$"},
+    {"ip": "10.30.1.51", "username": "sbc", "password": "cintel1234!@#$"},
+    {"ip": "10.30.1.52", "username": "sbc", "password": "cintel1234!@#$"},
+    {"ip": "10.30.2.51", "username": "sbc", "password": "cintel1234!@#$"},
+    {"ip": "10.30.2.52", "username": "sbc", "password": "cintel1234!@#$"},
+    {"ip": "10.30.3.51", "username": "sbc", "password": "cintel1234!@#$"},
+    {"ip": "10.30.3.52", "username": "sbc", "password": "cintel1234!@#$"},
+            {"ip": "10.30.1.71", "username": "media", "password": "123456"},
+            {"ip": "10.30.1.72", "username": "media", "password": "123456"},
+            {"ip": "10.30.2.91", "username": "media", "password": "cintel123"},
+            {"ip": "10.30.2.92", "username": "media", "password": "cintel123"},
+            {"ip": "10.30.3.91", "username": "media", "password": "cintel123"},
+            {"ip": "10.30.3.92", "username": "media", "password": "cintel123"},
+            {"ip": "10.30.1.81", "username": "lamp", "password": "cintel1234!@#$"},
+            {"ip": "10.30.2.81", "username": "lamp", "password": "cintel1234!@#$"},
+            {"ip": "10.30.3.81", "username": "lamp", "password": "cintel1234!@#$"},
+    {"ip": "10.30.1.101", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.1.102", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.1.103", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.1.104", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.1.105", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.1.106", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.1.107", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.1.108", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.2.101", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.2.102", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.2.103", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.2.104", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.2.105", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.2.106", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.2.107", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.2.108", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.3.101", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.3.102", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.3.103", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.3.104", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.3.105", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.3.106", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.3.107", "username": "ms", "password": "cintel1234!@#$"},
+    {"ip": "10.30.3.108", "username": "ms", "password": "cintel1234!@#$"},
 
-def job():
+            ]
+def job1(ts1):
     print("I'm working...")
-    now = datetime.datetime.now()
 
-    oneday = datetime.timedelta(days=1)
-    today = datetime.date.today()
-    yestoday = today - oneday
 
-    ts = yestoday.strftime('%Y%m%d')
-    date=ts
+    date=ts1
     filename1="test"+str(date)+".csv"
     f=codecs.open("test"+str(date)+".csv", "w",'utf-8')
     writer=csv.writer(f)
@@ -120,8 +178,60 @@ def job():
     #发邮件出去
     print(contents1)
     print(contents2)
+    return contents1,contents2
+#    yag = yagmail.SMTP(user='48965793@qq.com', password='qowsjbxjkjeybgfc', host='smtp.qq.com')
+#    yag.send('zhangfeng79212@163.com', subject="广东德律", contents=[ts1,json.dumps(contents1),json.dumps(contents2)])
+def getSpaceOne(dict):
+    try:
+        conn = fabric.Connection(dict['ip'], user=dict['username'], port=22, config=None, connect_kwargs={"password": dict['password']})
+        result = conn.run('df -h /|sed -n \'2p\'|awk  \'{print $6  $5}\'')
+        number = result.stdout.strip()
+        dict['rootSpace']=number
+        if(dict['username']=='media'):
+            print(dict['username'])
+            result1 = conn.run('df -h /home/media/media|sed -n \'2p\'|awk  \'{print $6  $5}\'')
+        else :
+            result1 = conn.run('df -h /home|sed -n \'2p\'|awk  \'{print $6  $5}\'')
+        number1 = result1.stdout.strip()
+        dict['homeSpace']=number1
+        return dict
+    except Exception as ex:
+        print("execute fail!!")
+        print(ex)
+        number = 'error'
+        number1='error'
+    finally:
+        conn.close()
+        return dict
+
+def getSpace(dictList):
+    for hostDict in dictList:
+        getSpaceOne(hostDict)
+        print(json.dumps(hostDict))
+    return dictList
+
+def job():
+    now = datetime.datetime.now()
+
+    oneday = datetime.timedelta(days=1)
+    today = datetime.date.today()
+    yestoday = today - oneday
+    qiantian=yestoday-oneday
+
+    ts1 = yestoday.strftime('%Y%m%d')
+    ts2=qiantian.strftime('%Y%m%d')
+    c1,c2=job1(ts1)
+    c3,c4=job1(ts2)
+    result = getSpace(dict2List)
+    str1 = ''
+    for dict in dict2List:
+        dict.pop('username')
+        dict.pop('password')
+        str1 += json.dumps(dict) + "\n"
+#        print(json.dumps(dict))
+    print(str1)
     yag = yagmail.SMTP(user='48965793@qq.com', password='qowsjbxjkjeybgfc', host='smtp.qq.com')
-    yag.send('zhangfeng79212@163.com', subject="广东德律", contents=[ts,json.dumps(contents1),json.dumps(contents2)])
+    yag.send('zhangfeng79212@163.com', subject="广东德律", contents=[ts1,json.dumps(c1),json.dumps(c2),ts2,json.dumps(c3),json.dumps(c4),str1])
 
 schedule.every().day.at("04:00").do(job)
 
@@ -129,3 +239,4 @@ schedule.every().day.at("04:00").do(job)
 while True:
     schedule.run_pending()
     time.sleep(1)
+#job()
