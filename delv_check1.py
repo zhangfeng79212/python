@@ -226,15 +226,26 @@ def job1(ts1):
 #    yag = yagmail.SMTP(user='48965793@qq.com', password='qowsjbxjkjeybgfc', host='smtp.qq.com')
 #    yag.send('zhangfeng79212@163.com', subject="广东德律", contents=[ts1,json.dumps(contents1),json.dumps(contents2)])
 def getSpaceOne(dict):
-        try:
-            pass
-        except Exception as ex:
-            pass
+    try:
         conn = fabric.Connection(dict['ip'], user=dict['username'], port=dict['port'], config=None, connect_kwargs={"password": dict['password']})
         #判断根分区的空间使用情况
         result = conn.run('df -h /|sed -n \'2p\'|awk  \'{print $6  $5}\'',warn=True)
         number = result.stdout.strip()
         dict['rootSpace']=number
+        #判断是否有cca和ccb的缺失
+        now = datetime.datetime.now()
+
+        oneday = datetime.timedelta(days=1)
+        today = datetime.date.today()
+        yestoday = today - oneday
+        qiantian = yestoday - oneday
+
+        ts1 = yestoday.strftime('%Y%m%d')
+        ts2 = qiantian.strftime('%Y%m%d')
+        if (dict['username'] == 'media'):
+            result=conn.run('./fileTest /home/media/media/800002/ccrecord/'+ts1,warn=True)
+            number=result.stdout.strip()
+            dict['CCACCBwav']=number
         #判断home空间情况
         if(dict['username']=='media'):
             result1 = conn.run('df -h /home/media/media|sed -n \'2p\'|awk  \'{print $6  $5}\'',warn=True)
@@ -257,20 +268,17 @@ def getSpaceOne(dict):
                     result4 = conn1.run('ls -t /home/ms1/cin/sync/sync*|head -1|cut -d \'/\' -f 6 && cat /home/ms1/cin/sync/mergesync.pos',warn=True)
                     number4 = result4.stdout.strip()
                     dict['mergesync-ms1'] = number4
-        return dict
+    except Exception as ex:
+        print("error*"*50)
+        print(ex)
+        print(dict)
+        print("error*" * 50)
 
 
 def getSpace(dictList):
     for hostDict in dictList:
-        try:
             getSpaceOne(hostDict)
             print(json.dumps(hostDict))
-        except Exception as ex:
-            print('*'*50)
-            print(json.dumps(hostDict))
-            print(ex)
-            print('*'*50)
-            continue
     return dictList
 
 def job():
@@ -298,8 +306,8 @@ def job():
              contents=[ts1+'node2,node3,node1-5002,node1-6004',json.dumps(c1),json.dumps(c2),json.dumps(c3),json.dumps(c4),
                         ts2 + 'node2,node3,node1-5002,node1-6004', json.dumps(c5), json.dumps(c6),json.dumps(c7), json.dumps(c8),str1])
 
-# schedule.every().day.at("05:00").do(job)
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
-job()
+schedule.every().day.at("05:00").do(job)
+while True:
+    schedule.run_pending()
+    time.sleep(1)
+#job()
